@@ -1,0 +1,16 @@
+name: nanocurrency
+description: A shared library implementing a Nano wallet
+version: 0.1.0
+homepage: https://github.com/getcanoe/nanocurrency
+author: Göran Krampe <goran.krampe@bioservo.com>
+
+environment:
+  sdk: '>=2.1.0'
+
+dependencies:
+  test: ^1.5.1+1
+  hex: ^0.1.2
+  pointycastle:
+    git:
+      url: git://github.com/getcanoe/pointycastle.git
+      ref: master

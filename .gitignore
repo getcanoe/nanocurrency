@@ -1,0 +1,8 @@
+.buildlog
+.pub/
+.dart_tool/
+build/
+packages
+.packages
+.idea/
+*.log
