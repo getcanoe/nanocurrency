@@ -1,8 +1,12 @@
+import 'package:ed25519_dart/ed25519_dart.dart';
 import 'package:nanocurrency/wallet.dart';
 import "package:test/test.dart";
 import "package:hex/hex.dart";
 
 void main() {
+  // ed25519 does not normally use Blake2b, so we need to tell it so
+  setDigestIdentifier('Blake2b');
+
   test("Account with keys from seed generated correctly", () {
     /*"seed": "BBA067329F44D8011BD6E15F43366A81307FBD8A4801A6997B354AD302F4BC72",
     "index": 0,

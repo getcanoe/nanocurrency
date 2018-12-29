@@ -69,7 +69,7 @@ packages:
     description:
       path: "."
       ref: master
-      resolved-ref: bf85346d92c78a61e16c187cb890f6b2d96dd4b4
+      resolved-ref: "431617e2e9238457340e36998cdd617999da7039"
       url: "https://github.com/getcanoe/ed25519_dart"
     source: git
     version: "1.0.2"
