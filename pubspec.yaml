@@ -10,7 +10,11 @@ environment:
 dependencies:
   test: ^1.5.1+1
   hex: ^0.1.2
+  ed25519_dart:
+    git:
+      url: https://github.com/getcanoe/ed25519_dart
+      ref: master
   pointycastle:
     git:
-      url: git://github.com/getcanoe/pointycastle.git
+      url: https://github.com/getcanoe/pointycastle
       ref: master

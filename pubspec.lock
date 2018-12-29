@@ -64,6 +64,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.14.6"
+  ed25519_dart:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: master
+      resolved-ref: bf85346d92c78a61e16c187cb890f6b2d96dd4b4
+      url: "https://github.com/getcanoe/ed25519_dart"
+    source: git
+    version: "1.0.2"
   front_end:
     dependency: transitive
     description:
@@ -217,7 +226,7 @@ packages:
       path: "."
       ref: master
       resolved-ref: d012055f80d8c93cdf8fe12faff4a19cf6d3fc83
-      url: "git://github.com/getcanoe/pointycastle.git"
+      url: "https://github.com/getcanoe/pointycastle"
     source: git
     version: "1.0.0"
   pool:
