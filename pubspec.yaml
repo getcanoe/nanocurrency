@@ -2,13 +2,13 @@ name: nanocurrency
 description: A shared library implementing a Nano wallet
 version: 0.1.0
 homepage: https://github.com/getcanoe/nanocurrency
-author: Göran Krampe <goran.krampe@bioservo.com>
+author: Göran Krampe <goran.krampe@gmail.com>
 
 environment:
   sdk: '>=2.1.0'
 
 dependencies:
-  test: ^1.5.1+1
+  test: ^1.5.2
   hex: ^0.1.2
   ed25519_dart:
     git:
