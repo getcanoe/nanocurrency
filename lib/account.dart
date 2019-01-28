@@ -2,6 +2,7 @@ import 'dart:typed_data';
 
 import 'package:nanocurrency/block.dart';
 import 'package:ed25519_dart/ed25519_dart.dart' as ed25519;
+import 'package:nanocurrency/block_chain.dart';
 import 'package:nanocurrency/util.dart';
 
 /// Represents an Account in a Wallet. Has an identifier which is also referred to as the
@@ -23,21 +24,6 @@ class Account {
     setSecretKey(key);
   }
 
-  /// Seed: This is a series of 32 random bytes of data, usually represented as
-  /// a 64 character, uppercase hexadecimal string (0-9A-F). This value is used
-  /// to derive private keys for accounts by combining it with an index and then
-  /// putting that into a hash function (PrivK[i] = blake2b(outLen = 32, input =
-  /// seed || i) where || means concatentaion and i is a 32bit unsigned
-  /// integer). Private keys are derived deterministically from the seed, which
-  /// means that as long as you put the same seed and index into the derivation
-  /// function, you will get the same resulting private key every time.
-  /// Therefore, knowing just the seed allows you to be able to access all the
-  /// derived private keys from index 0 to 2^32 - 1 (because the index value is
-  /// a unsigned 32 bit integer). Wallet implementations will commonly start
-  /// from index 0 and increment it by 1 each time you create a new account so
-  /// that recovering accounts is as easy as importing the seed and then
-  /// repeating this account creation process.
-
   /// Public Key: This is also a 32 byte value, usually represented as a 64
   /// character, upper case hexadecimal string (0-9A-F). It is derived from a
   /// private key by using the ed25519 curve using blake2b as the hash function
@@ -56,7 +42,8 @@ class Account {
   BigInt pendingBalance;
   BigInt balance;
 
-  List<Block> chain;
+  BlockChain chain = BlockChain();
+
   String representative;
 
   setSecretKey(Uint8List bytes) {
